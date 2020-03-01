@@ -6,9 +6,9 @@ client = pymongo.MongoClient('localhost',27017)
 db = client['database_name']
 class Myspider(SitemapSpider):
     name = 'spidername'
-    sitemap_urls = ['https://www.example.com/sitemap.xml','http://www.example.com/image-sitemap.xml']
+    sitemap_urls = ['https://www.edx.org/sitemap']#,'http://www.example.com/image-sitemap.xml']
     sitemap_rules = [
-        ('/carddetails/', 'parse'),
+        ('/learn/html', 'parse'),
         # ('/category/', 'parse_category'),
     ]
     def parse(self,response):
